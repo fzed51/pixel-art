@@ -16,6 +16,17 @@ body {
     padding: 0;
 }
 
+nav {
+    display: flex;
+}
+
+nav a {
+    display: block;
+    line-height: 2;
+    padding: 0 1em;
+}
+
+
 /** ****** Commun ****** **/
 
 button {
@@ -25,7 +36,7 @@ button {
     border: none;
     border-radius: .5em;
     padding: .5em 1em;
-    transition: background-position linear .3s, box-shadow linear .1s;
+    transition: background-position linear .3s, box-shadow ease-in-out .1s;
     box-shadow: 1px 1px 1px #000;
 }
 
@@ -39,23 +50,33 @@ button:focus {
 }
 
 .page {
-    display: none;
+    display: block;
+    position: absolute;
+    opacity: 0;
+    transition: opacity linear .3s;
+    background-color: #eee;
+    pointer-events: none;
+    width: 100%;
+    height: inherit;
 }
 
+
 /** ****** New ****** **/
+
+
+/** ****** New ****** **/
+
+
 /** ****** Open ****** **/
+
+
 /** ****** Edit ****** **/
 
 .page.page-edit {
-    display: block;
-    position: relative;
-    width: 100%;
-    line-height: 100;
-    background-color: #ddd;
+    opacity: 1;
 }
 
-.page.page-edit .grille {
-}
+.page.page-edit .grille {}
 
 .page.page-edit .grille td {
     border: 1px dashed #888;
