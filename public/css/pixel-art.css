@@ -1,0 +1,65 @@
+html {
+    background-color: #f00;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+body {
+    background-color: #fff;
+    position: relative;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/** ****** Commun ****** **/
+
+button {
+    background-image: linear-gradient(45deg, green, lime, lightgreen);
+    background-size: 200%;
+    background-position-x: 0%;
+    border: none;
+    border-radius: .5em;
+    padding: .5em 1em;
+    transition: background-position linear .3s, box-shadow linear .1s;
+    box-shadow: 1px 1px 1px #000;
+}
+
+button:hover {
+    background-position-x: 100%;
+    outline: none;
+}
+
+button:focus {
+    box-shadow: 0px 0px 0px #000;
+}
+
+.page {
+    display: none;
+}
+
+/** ****** New ****** **/
+/** ****** Open ****** **/
+/** ****** Edit ****** **/
+
+.page.page-edit {
+    display: block;
+    position: relative;
+    width: 100%;
+    line-height: 100;
+    background-color: #ddd;
+}
+
+.page.page-edit .grille {
+}
+
+.page.page-edit .grille td {
+    border: 1px dashed #888;
+    border-radius: 0.2em;
+    width: 1.5em;
+    height: 1.5em;
+}
