@@ -1,8 +1,14 @@
+'use strict';
+
 var route = new Route();
 
-Array.from(document.querySelector('nav a')).forEach((item) => {
-    item.addEventListener('click', (ev) => {
-        ev.preventDefault();
-        route.go(ev.target.href);
-    })
-});
+document.addEventListener('DOMContentLoaded', (ex)=>{
+    var anchor = Array.from(document.querySelectorAll('nav a'));
+    anchor.forEach((item) => {
+        item.addEventListener('click', (ev) => {
+            ev.preventDefault();
+            route.go(ev.target.href);
+        })
+    });
+})
+
